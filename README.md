@@ -47,5 +47,6 @@ php artisan storage:link
 php artisan migrate
 ```
 
-上記の手順で、[http://localhost:8080/](http://localhost:8080/)にアクセスすると、
+上記コマンドを実行後、[http://localhost:8080/](http://localhost:8080/)にアクセスすると、
 Laravelのウェルカムページが表示されます。
+※Laravelのソースはsrc配下に配置されています。
