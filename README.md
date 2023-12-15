@@ -26,6 +26,7 @@ You have not agreed to the Xcode and Apple SDKs license. You must agree to the l
 Press enter to display the license:
 
 Xcode and Apple SDKs Agreement
+```
 
 PHPのバージョン確認
 ```
