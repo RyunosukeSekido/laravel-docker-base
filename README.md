@@ -28,6 +28,11 @@ Press enter to display the license:
 Xcode and Apple SDKs Agreement
 ```
 
+下記コマンド（Xcodeのライセンスに同意するためのコマンド）を実行して再度```make install```を実行してください。
+```
+sudo xcodebuild -license accept
+```
+
 PHPのバージョン確認
 ```
 docker compose exec app php -v
@@ -54,9 +59,4 @@ docker compose exec app php artisan -V
 MySQLのバージョン確認
 ```
 docker compose exec db mysql -V
-```
-```
-下記コマンド（Xcodeのライセンスに同意するためのコマンド）を実行して再度```make install```を実行してください。
-```
-sudo xcodebuild -license accept
 ```
