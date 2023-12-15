@@ -26,6 +26,34 @@ You have not agreed to the Xcode and Apple SDKs license. You must agree to the l
 Press enter to display the license:
 
 Xcode and Apple SDKs Agreement
+
+PHPのバージョン確認
+```
+docker compose exec app php -v
+```
+
+composerのバージョン確認
+```
+docker compose exec app composer -v
+```
+
+インストール済みの拡張機能一覧
+```
+docker compose exec app php -m
+```
+
+nginxのバージョン確認
+```
+docker compose exec web nginx -v
+```
+Laravelのバージョン確認
+```
+docker compose exec app php artisan -V
+```
+MySQLのバージョン確認
+```
+docker compose exec db mysql -V
+```
 ```
 下記コマンド（Xcodeのライセンスに同意するためのコマンド）を実行して再度```make install```を実行してください。
 ```
