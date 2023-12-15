@@ -10,43 +10,24 @@ Laravel+Docker環境（nginx, MySQL）でwebアプリケーションを構築す
 git clone https://github.com/RyunosukeSekido/laravel-docker-base.git
 ```
 
-2. Dockerをビルド
+2. Makefileを使って環境を構築
 ```
-docker compose up -d
-```
-以降のコマンドはappコンテナに入って実行します。
-```
-docker compose exec app bash
-```
-
-3. エラーログを書き込むための権限変更
-```
-chmod -R 777 storage bootstrap/cache
-```
-4. プロジェクトの依存関係をインストール
-```
-composer install
-```
-
-5. envファイルの作成
-```
-cp .env.example .env
-```
-6. アプリケーションキーの作成
-```
-php artisan key:generate
-```
-
-7. シンボリックリンクの作成
-```
-php artisan storage:link
-```
-
-8. マイグレーション
-```
-php artisan migrate
+make install
 ```
 
 上記コマンドを実行後、[http://localhost:8080/](http://localhost:8080/)にアクセスすると、
-Laravelのウェルカムページが表示されます。
+Laravelのウェルカムページが表示されます。  
 ※Laravelのソースはsrc配下に配置されています。
+
+## 補足
+``` make install ```を実行後に以下のようなメッセージが表示される場合
+```
+You have not agreed to the Xcode and Apple SDKs license. You must agree to the license below in order to use Xcode.
+Press enter to display the license:
+
+Xcode and Apple SDKs Agreement
+```
+下記コマンド（Xcodeのライセンスに同意するためのコマンド）を実行して再度```make install```を実行してください。
+```
+sudo xcodebuild -license accept
+```
