@@ -17,7 +17,13 @@ make install
 
 上記コマンドを実行後、[http://localhost:8080/](http://localhost:8080/)にアクセスすると、
 Laravelのウェルカムページが表示されます。  
-※Laravelのソースはsrc配下に配置されています。
+Laravelのソースはsrc配下に配置されています。
+
+※ログイン機能を使用する場合は以下コマンドを実行してください
+```
+docker compose exec app bash
+npm run build
+```
 
 ## 補足
 ``` make install ```を実行後に以下のようなメッセージが表示される場合
